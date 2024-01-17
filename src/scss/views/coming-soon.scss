@@ -1,0 +1,25 @@
+.coming-soon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+
+  .coming-soon__heading {
+    font-size: 32px;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--color-black);
+    margin-bottom: 15px;
+  }
+
+  .coming-soon__btn-back {
+    color: var(--color-white);
+    background-color: var(--color-violet-blue);
+    font-size: 18px;
+    padding: 10px;
+    font-weight: 500;
+    font-style: normal;
+    border-radius: 10px;
+  }
+}

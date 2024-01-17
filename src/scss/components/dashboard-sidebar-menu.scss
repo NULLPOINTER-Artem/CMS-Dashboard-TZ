@@ -1,0 +1,135 @@
+.dashboard-sidebar-menu {
+  padding: 37px 28px 76px 28px;
+  min-width: 306px;
+  background: var(--color-white);
+  box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.5);
+  min-height: 100vh;
+  margin-right: 71px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &.dashboard-sidebar-menu--open {
+    transform: translateX(0);
+  }
+
+  @include media('lg') {
+    position: fixed;
+    max-height: 100vh;
+    overflow-y: scroll;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    margin-right: unset;
+    
+    padding: 37px 28px 40px 28px;
+
+    transition: all 0.5s;
+    transform: translateX(-100%);
+  }
+
+  @include media('sm') {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.dashboard-sidebar-menu__close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  width: 18px;
+  height: 18px;
+
+  .dashboard-sidebar-menu__close-icon { 
+    width: inherit;
+    height: inherit;
+    color: var(--color-dark-charcoal);
+  }
+}
+
+.dashboard-menu-btn {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 21px;
+  left: 12px;
+  width: 44px;
+  height: 44px;
+
+  @include media('lg') {
+    display: block;
+  }
+
+  .dashboard-menu-btn__icon {
+    color: var(--color-black);
+    width: inherit;
+    height: inherit;
+  }
+}
+
+.dashboard-sidebar-menu__heading {
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.26px;
+  margin-bottom: 54px;
+
+  display: inline-block;
+  vertical-align: middle;
+
+  .dashboard-sidebar-menu__heading-icon {
+    width: 37px;
+    height: 37px;
+    margin-right: 8px;
+    color: var(--color-black);
+
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .dashboard-sidebar-menu__heading-version {
+    color: #838383;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.1px;
+    margin-left: 4px;
+
+    display: inline-block;
+    vertical-align: baseline;
+  }
+}
+
+.dashboard-sidebar-menu__user {
+  margin-top: auto;
+  padding-top: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .dashboard-sidebar-menu__photo {
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    margin-right: 12px;
+  }
+
+  .dashboard-sidebar-menu__user-name {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.14px;
+  }
+
+  .dashboard-sidebar-menu__user-position {
+    color: var(--color-silver-gray);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.12px;
+  }
+}

@@ -1,0 +1,15 @@
+include ../abstract/mixins.pug
+
+doctype html
+html(lang='en')
+  block head
+  include ../partitions/head.pug
+
+  body
+    .dashboard
+      include ../components/dashboard-sidebar-menu.pug
+
+      .dashboard-content.container
+        block content
+
+    include ../partitions/scripts.pug

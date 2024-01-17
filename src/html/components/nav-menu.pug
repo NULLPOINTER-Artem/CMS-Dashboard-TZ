@@ -1,0 +1,48 @@
+-
+  const links = [
+    {
+      icon: 'key-square',
+      text: 'Dashboard',
+      hLink: '/coming-soon.html',
+      namePage: '',
+    },
+    {
+      icon: '3d-square',
+      text: 'Product',
+      hLink: '/coming-soon.html',
+      namePage: '',
+    },
+    {
+      icon: 'user',
+      text: 'Customers',
+      hLink: '/',
+      namePage: 'customers',
+    },
+    {
+      icon: 'wallet-money',
+      text: 'Income',
+      hLink: '/coming-soon.html',
+      namePage: '',
+    },
+    {
+      icon: 'percentage-shape',
+      text: 'Promote',
+      hLink: '/coming-soon.html',
+      namePage: '',
+    },
+    {
+      icon: 'message-question',
+      text: 'Help',
+      hLink: '/coming-soon.html',
+      namePage: '',
+    },
+  ]
+
+nav.nav-menu
+  each link, indexLink in links
+    li.nav-menu__item(class=namePage === link.namePage ? 'nav-menu__item--active' : '')
+      a.nav-menu__link(href=link.hLink)
+        +icon(link.icon, 'nav-menu__link-icon')
+        span #{link.text}
+        if indexLink >= 1
+          +icon('arrow', 'nav-menu__link-arrow')

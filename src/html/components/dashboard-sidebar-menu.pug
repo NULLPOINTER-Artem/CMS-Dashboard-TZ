@@ -1,0 +1,19 @@
+.dashboard-sidebar-menu
+  .dashboard-sidebar-menu__close
+    +icon('close', 'dashboard-sidebar-menu__close-icon')
+
+  .dashboard-sidebar-menu__heading
+    +icon('settings', 'dashboard-sidebar-menu__heading-icon')
+    span Dashboard
+    span.dashboard-sidebar-menu__heading-version v.01
+
+  include nav-menu.pug
+
+  .dashboard-sidebar-menu__user
+    .dashboard-sidebar-menu__photo
+      img(src='@images/user-face.png', alt='user-face')
+    div
+      .dashboard-sidebar-menu__user-name Evano
+      .dashboard-sidebar-menu__user-position Project Manager
+.dashboard-menu-btn
+  +icon('burger-menu', 'dashboard-menu-btn__icon')
