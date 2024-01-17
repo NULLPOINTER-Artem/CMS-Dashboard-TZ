@@ -8,5 +8,9 @@
     padding-top: 40px;
     padding-bottom: 40px;
     min-height: 100vh;
+
+    @include media("lg") {
+      padding-top: 80px;
+    }
   }
 }

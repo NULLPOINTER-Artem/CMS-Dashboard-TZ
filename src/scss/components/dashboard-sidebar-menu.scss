@@ -37,11 +37,16 @@
 }
 
 .dashboard-sidebar-menu__close {
+  display: none;
   position: absolute;
   right: 20px;
   top: 15px;
   width: 18px;
   height: 18px;
+
+  @include media('lg') {
+    display: block;
+  }
 
   .dashboard-sidebar-menu__close-icon { 
     width: inherit;
